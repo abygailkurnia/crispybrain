@@ -1,0 +1,164 @@
+/* ====== STYLE.CSS ====== */
+
+
+:root {
+  --accent: #2f855a;
+  --muted: #6b7280;
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --maxw: 1100px;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #a8e6cf, #dcedc1, #ffd3b6);
+}
+
+.full-image {
+    width: 100%;
+    height: auto; /* biar tinggi menyesuaikan */
+    display: block; /* hilangkan jarak default */
+}
+
+
+/* ================= NAVBAR ================= */
+.header {
+  background: linear-gradient(90deg, rgba(47,133,90,.95), rgba(59,130,246,.92));
+  color: #fff;
+  padding: 14px 0;
+}
+
+
+.nav-buttons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;          /* biar sepanjang layar */
+    background: white;    /* bisa diganti warna lain */
+    padding: 10px;        /* jarak biar rapi */
+    display: flex;
+    justify-content: center;
+    gap: 15px;            /* jarak antar tombol */
+    z-index: 999;         /* biar tidak ketutup elemen lain */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* efek bayangan */
+    padding-top: 70;
+}
+
+
+.nav-container {
+  max-width: var(--maxw);
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.nama { font-weight: 800; }
+.kelas { font-size: 12px; color: rgba(255,255,255,.85); }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,.18);
+}
+
+/* ================= HERO ================= */
+
+/* Hilangkan jarak besar di hero */
+.hero {
+    padding-top: 80px; /* sebelumnya mungkin 180px atau lebih */
+}
+
+/* Jika masih terlalu turun, boleh kecilin lagi */
+.hero {
+    margin-top: 0;
+}
+
+.hero {
+  padding: 40px 20px;
+  background: rgba(255,255,255,.07);
+  backdrop-filter: blur(3px);
+}
+
+.hero-box {
+  max-width: var(--maxw);
+  margin: auto;
+  background: rgba(255,255,255,.12);
+  padding: 28px;
+  border-radius: 14px;
+  color: #fff;
+}
+
+.hero-box h1 { margin-top: 0; }
+
+/* ================= LAYOUT ================= */
+.content {
+  max-width: var(--maxw);
+  margin: 30px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 24px;
+}
+
+@media (max-width: 1100px) {
+  .content { grid-template-columns: 1fr; }
+}
+
+/* ================= ARTICLE ================= */
+.section {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.05);
+}
+
+.section h2 { margin-top: 0; }
+
+/* ================= GALLERY ================= */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 150p
+}
+
